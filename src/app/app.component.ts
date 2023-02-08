@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test';
+  
+  constructor(){
+
+  }
+
+  private mult(num) {
+    return num;
+  }
 }
