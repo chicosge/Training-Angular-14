@@ -45,6 +45,15 @@ export class AppComponent {
      const auxSplit = "esta es la cadena a montar".split(" ");
      console.log("auxSplit: ", auxSplit);
 
+     //Splice. Funcion en la que indicamos que elementos de un array queremos eliminar. La funcion o metodo recibe 2 parametros, el primero es el indice (donde se va a situal), el segundo parametro es cantidad de elementos a eliminar desde ese indice mencionado.
+
+     const A = ["a","b","c","de","f"];
+     console.log("Arreglo antes de editar: ", A);
+     const auxSplice = A.splice(2,1); //a partir del elemento indice 2 voy a eliminar 1 elemento del arreglo.
+
+     console.log("Nuevo arreglo: ",A);
+     console.log("Elemento eliminado: ",auxSplice);
+
   }
 
   //Arrow functions
