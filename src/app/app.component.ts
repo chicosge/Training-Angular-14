@@ -54,6 +54,13 @@ export class AppComponent {
      console.log("Nuevo arreglo: ",A);
      console.log("Elemento eliminado: ",auxSplice);
 
+     //Reduce. Recorre un arreglo y realiza operaciones con los registros del arreglo mediante una funcion flecha. Tiene 3 parametros de entrada:
+     //Acumulador, Valor actual, Indice (o valor inicial). Este ultimo es un parametro opcional.
+
+     const B = [1,9,2,8,3,7,4];
+     const auxReduce = B.reduce((acc,current,index) => acc+current * index ,3);
+    console.log("auxReduce: ", auxReduce);
+
   }
 
   //Arrow functions
