@@ -61,6 +61,25 @@ export class AppComponent {
      const auxReduce = B.reduce((acc,current,index) => acc+current * index ,3);
     console.log("auxReduce: ", auxReduce);
 
+    // Operadores  JSON sobre objetos. 
+    //Entries, keys y values. el primero te devuelve un arreglo de arreglos. el arreglo esta compuesto de arreglos, que son los pares de llave y valor.
+    //keys devuelve un array con contenido de las llaves, o campos del objeto. el values te devuelve igual un arreglo pero con los valores de cada campo key.
+
+    const objetComp = {
+      id: 1,
+      name: "Erick",
+      lastName: "Servitoalla",
+    };
+    
+    const auxEntries = Object.entries(objetComp);
+    console.log("Entries: ", auxEntries);
+    
+    const auxKeys = Object.keys(objetComp);
+    console.log("Entries: ", auxKeys);
+    
+    const auxValues = Object.values(objetComp);
+    console.log("Entries: ", auxValues);
+    
   }
 
   //Arrow functions
