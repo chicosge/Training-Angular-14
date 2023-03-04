@@ -75,11 +75,73 @@ export class AppComponent {
     console.log("Entries: ", auxEntries);
     
     const auxKeys = Object.keys(objetComp);
-    console.log("Entries: ", auxKeys);
+    console.log("Keys: ", auxKeys);
     
     const auxValues = Object.values(objetComp);
-    console.log("Entries: ", auxValues);
+    console.log("Values: ", auxValues);
     
+    //Desestructuracion de JSON.
+
+    const persona = {
+      id: 1,
+      name: "erik",
+      country: {
+        idCountry: "d1",
+        ciudad: "mexico",
+        CD: 1,
+      }
+    }
+
+    const {country,id} = persona; //desestructuramos, estamos diciendo que en una constante llamada "country" vamos a grabar lo que el objeto tiene en el atributo country.
+    console.log("Country: ", country, "\t ID:", id);
+
+
+    //Operador Spread (propagacion) y REST. 
+    
+    const arr1 = [1,2,3,4,5];
+    const auxSpread = [...arr1,6,7,8,9,10];
+    console.log("Spread: ", auxSpread);
+    this.getRest (1,2,"agua", 4);
+
+
+    //Ejercicio sesion 4 sumar todas las edades de los objetos.
+
+    const obj = {
+      0: {
+        id: 1,
+        name: "Pedro",
+        age: 25,
+      },
+      1: {
+        id: 2,
+        name: "Juan",
+        age: 10,
+      },
+      2: {
+        id: 3,
+        name: "Jose",
+        age: 2,
+      },
+      3: {
+        id: 4,
+        name: "Jonas",
+        age: 11
+      },
+    };
+
+    const resp = Object.values(obj).reduce((prev, actual) => prev + actual.age,0);
+    console.log ("Suma de edades: ", resp);
+
+    //ejercicio 2 sesion 4. Devolver un array, filtrar las personas mayores de 10 años. solo mostrar ID.
+    //Resultado esperado: [1,4]
+
+    const res = Object.values(obj).filter(num => num.age > 10).map(p =>p.id);
+      console.log("Res: ", res);
+    
+  }
+
+   getRest(...param: any[]){
+    console.log("REST: ", param);
   }
 
   //Arrow functions
