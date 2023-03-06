@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test';
+
+  auxFind1 = "cadenaa";
+  apellido = "apellido";
+
+  edad = [1,2,2,3,4,5,6].reduce((prev,acc,index) => prev+acc, 0);
   
   constructor(){
     console.log("esto del constructor es lo primero que se ejecuta");

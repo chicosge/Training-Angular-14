@@ -8,6 +8,13 @@
 <app-myfirst></app-myfirst>
 
 <app-myfirst></app-myfirst>
+<p> Mi componente Person: </p>
+<app-person name = "erick" lastName = "Servin" [age] = 32></app-person> <!--Podemos mandar los valores de entrada para nuestro componente desde el llamado a este. le mando valores como aqui, o puedo mandarle variables, encerrando entre corchetes el nombre de la entrada q estamos mandando, como en age o como el ejemplo de aca abajo:-->
+
+<app-person [name] = "auxFind1" [lastName] = "apellido" [age] = "edad" ></app-person>
+
+<!--en este ejemplo mando el valor mediante una variable que debe existir en el app component.ts donde estoy trabajandolo. y debe existir en la class appComponent, o en la que estoy -->
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
