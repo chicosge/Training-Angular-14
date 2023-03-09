@@ -2,5 +2,9 @@
 <div style="border: 1px solid red">
   <p>Name: {{ name }}</p>
   <p>Last Name: {{ lastName }}</p>
-  <p>Age: {{ age }}</p>
+  <p>Age: {{ age }}</p><!--Ponemos llaves para indicar que es input y va a ir al componente typescript a obtener la info. -->
 </div>
+
+<!--Desde aqui tomamos el evento del componente ts ESG-->
+
+<button (click)="funPrint($event)">Print</button><!--En angular, el evento no se llama onClick como en javascript, se llama solo click. Y encierro entre parentesis para indicar que despues de esa declaracion voy a ejecutar codigo typescript. PARA INPUT es Llave y para OUTPUT es parentesis ESG-->
