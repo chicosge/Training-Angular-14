@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IPerson2 } from './person2/person2.model';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +15,16 @@ export class AppComponent {
   edad = [1,2,2,3,4,5,6].reduce((prev,acc,index) => prev+acc, 0);
 
   getPrint (event:any){
-    console.log(event);
+    console.log("hi ", event);
   }
+
+  getPrint2 (event:IPerson2){
+    console.log("Parent component: ", event);
+    this.person2 = event;
+  }
+
+  public person2 : IPerson2;
+
   constructor(){
     console.log("esto del constructor es lo primero que se ejecuta");
 

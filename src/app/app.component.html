@@ -20,6 +20,13 @@
 
 <!--Aqui estoy creando otra llamada al componente y mandandole valores de entrada y tambien tomando el de salida. y con ese voy a mandar llamar otra funcion en mi ts de app component.ESG-->
 
+<p>Aqui abajo vamos a trabajar con el componente Person 2.</p>
+<app-person2 name = "Juan" lastName = "Perez" [age] = 32 (print) = "getPrint2($event)"></app-person2>
+
+<p>{{person2?.name}}</p>
+<p>{{person2?.lastName}}</p>
+<p>{{person2?.age}}</p><!--Estamos imprimiento un json y probablemente no tenga datos iniciales. por eso ponemos el signo de interrogacion, si no existe valor inicial no mostramos nada, si existe lo mostramos-->
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
