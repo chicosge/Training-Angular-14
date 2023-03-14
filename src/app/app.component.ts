@@ -18,13 +18,25 @@ export class AppComponent {
     console.log("hi ", event);
   }
 
-  getPrint2 (event:IPerson2){
+  getPrint2 (event:IPerson2, personid?:any){ //puedo mandar muchos parametros, pero si alguno no es obligatorio solo lo indico poniendo el signo ? despues del nombre del parametro.
     console.log("Parent component: ", event);
     this.person2 = event;
   }
 
   public person2 : IPerson2;
 
+  public example: string ="texto de ejemplo we";
+  public a : number = 2;
+  public b: number = 4;
+
+  getText(event : any) : void{
+    console.log("LastName: ", event);
+  }
+
+  imprimeName(name: any){
+    console.log("nombre: ", name.value); //si no especifico que quiero imprimir, me traera todo el valor del elemento donde se encuentra la variable, pues como se menciona en el HTML se asigna a la variable todo lo del elemento donde esta declarada.
+  }
+  
   constructor(){
     console.log("esto del constructor es lo primero que se ejecuta");
 

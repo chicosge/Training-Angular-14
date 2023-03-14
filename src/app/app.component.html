@@ -27,6 +27,30 @@
 <p>{{person2?.lastName}}</p>
 <p>{{person2?.age}}</p><!--Estamos imprimiento un json y probablemente no tenga datos iniciales. por eso ponemos el signo de interrogacion, si no existe valor inicial no mostramos nada, si existe lo mostramos-->
 
+
+<!--Aqui abajo muestro ejemplo de comunicacion bilateral. traigo datos del TS pero si modifico en el DOM tambien se modifica en TS. ESG-->
+
+<input type="text" [(ngModel)] = "example"/>
+<p>{{example}}
+</p>
+
+<!--OTRO EJEMPLO DE DOBLE COMUNICACION EN TIEMPO REAL. ESG-->
+<input type="number" [(ngModel)] = "a"/>
+<input type="number" [(ngModel)] = "b"/>
+<p>{{a + b}}
+</p>
+
+<!--OTRO EJEMPLO Donde solo mando al TS EN TIEMPO REAL con el mismo ng model. ESG-->
+
+LastName: <input type="text" ngModel (ngModelChange) = "getText($event)">
+<!--Aqui solo mando al TS, el evento es el cambio en el input. ahi mando el contenido al ts. ESG-->
+
+Name: <input type="text" #name> <!--El # es para indicar una variable local, en la que vamos a MANDAR todo el contenido donde esta declarada, en este caso todo lo del input-->
+<button (click)="imprimeName(name)">Imprimir</button>
+
+
+
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->

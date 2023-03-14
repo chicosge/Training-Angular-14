@@ -3,8 +3,8 @@ import { IPerson2 } from './person2.model';
 
 @Component({
   selector: 'app-person2',
-  templateUrl: './person2.component.html',
-  styleUrls: ['./person2.component.css']
+  templateUrl: './person2.component.html',  //template de url, que seria el html, aqui podria poner directamente el codigo html si usara el componente: "template"  y encierro el codigo entre ´´ estos caracteres. Esto se recomienda cuand es html muy corto, para omitir archivos.
+  styleUrls: ['./person2.component.css']// lo mismo con los estilos, este no es obligatorio.
 })
 export class Person2Component implements OnInit {
 
