@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormControl, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +17,8 @@ import { Person2Component } from './person2/person2.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
