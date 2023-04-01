@@ -3,5 +3,5 @@
 <p>Componente principal ANGULAR!</p>
 <p>Aqui abajo mando llamar a mi tercer componente para ver ngOninit, OnChage, etc. Ciclos de vida de componentes:</p>
 
-<app-myfirst [name]="name"></app-myfirst>
+<app-myfirst [name]="name" [lastName]="lastName"></app-myfirst>
 <button (click)="name = 'juanito'">Change Name</button><!--NO SE RECOMIENDA HACER ESTAS REASIGNACION DE VALORES A VARIABLES eN EL HTML, MEJOR MANDAR LLAMAR UNA FUNCION Y QUE ELLA HAGA EL CAMBIO O LA LOGICA-->
