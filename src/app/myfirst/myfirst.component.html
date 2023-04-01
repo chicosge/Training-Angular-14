@@ -1,5 +1,7 @@
 <div style="border: 2px solid red">
 <p>
-myfirst works yeah {{name}} MDF!!!
+myfirst works yeah {{name + "--" + middleName + "--" + lastName}} MDF!!!
 </p>
+<p>GENERAL: {{generalData}}</p>
+<input type="text"[(ngModel)]="middleName">
 </div>

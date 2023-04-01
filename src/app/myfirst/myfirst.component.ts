@@ -4,6 +4,7 @@ import {
   OnChanges,
   OnInit,
   SimpleChanges,
+  DoCheck,
 } from '@angular/core';
 
 @Component({
@@ -15,6 +16,11 @@ export class MyfirstComponent implements OnInit, OnChanges {
   //implements es heredar de una interfaz alguna funcionalidad, en este caso estamos jalando OnInit, onchanges,
 
   @Input() name!: string; //recordemos, con el ? identifica que si no existe la inicialice. de lo contrario manda error, es eso o ponerle un valor inicial. o con un ! deja pasar el error.
+  @Input() lastName: string ="Servin"; 
+  
+  public middleName : string ="";
+  public generalData: string="ready2";
+
   constructor() {
     console.log('Constructor');
   }
@@ -29,5 +35,16 @@ export class MyfirstComponent implements OnInit, OnChanges {
     console.log('onChanges'); //segun jerarquia de ciclo de vida, este es el primero, pero no aparece en consola porque se necesita trabajar con inputs, o con algo que genere cambios en el componente. en e lmomento que exista algo q reciba el componente, se ejecuta lo de aqui y en consola veremos que aparece antes de oninit, pero despues de constructor. Entra muchas veces a este metodo
     console.log('es primer cambio?: ', changes['name'].isFirstChange());
     console.log('cambios:', changes);
+
+    if(changes["lastName"].currentValue=="Servilleta"){
+      console.log("Es servilleta");
+    }
+    else{
+      console.log("Es servitoalla");
+    }
+  }
+  ngDoCheck() :void {
+    console.log("Do-Check");
+    this.generalData =this.name + " - " + this.lastName + " - " + this.middleName; //cualquier cambio que hace el TS o el DOOM  el docheck lo registra. es importante esto para que no ejecutemos recursiones o procesos complejos aqui, pues cada cambio siempre entra docheck.
   }
 }
